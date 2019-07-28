@@ -1,0 +1,48 @@
+.main-content {
+    background: url(../images/banner1.jpg) center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    position: relative;
+    min-height: 47em;
+}
+
+.banner-w3layouts-info h3 {
+    font-size: 2.7em;
+    color:whitesmoke;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+    font-weight: 300;
+    margin: 1em 0;
+    line-height: 1.5em;
+}
+.banner-form button.btn, a.btn.btn-course {
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    text-decoration: none;
+    background: #ff3838;
+    float: right;
+    margin-bottom: 10px;
+
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o- border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 1em;
+}
+.last-content {
+    background: url(../images/car1.jpg) center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
