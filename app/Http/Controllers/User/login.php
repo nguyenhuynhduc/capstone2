@@ -41,7 +41,7 @@ class login extends Controller
         elseif ($user) {
             session(['user' => $user->idUser]);
             session(['name' => $user->fullname]);
-            return view('User/account');
+            return redirect()->route('account');
         }
         else{
             Session()->flash('message', "Sai Tài Khoản hoặc mật khẩu");

@@ -19,14 +19,14 @@
                             <h4 class="group card-title inner list-group-item-heading">
                                 {{$item->parkName}}</h4>
                             <p class="group inner list-group-item-text">
-                                Bãi xe nằm ở vị trí 02 Bạch Đằng bên cạnh bờ sông Hàn .</p>
+                                {{$item->des}}</p>
                             <div class="row course-des mt-4">
                                 <div class="col-6">
                                     <p class="lead">
                                         {{$item->price}} VNĐ</p>
                                 </div>
                                 <div class="col-6 ban-buttons">
-                                    <a class="btn btn-course" href="daiHan.html">Dài Hạn </a>
+                                    <a class="btn btn-course" href="{{route('getBookLong')}}?id={{$item->idPark}}">Dài Hạn </a>
 
                                     <a class="btn btn-course" href="nganHan.html">Ngắn Hạn </a>
                                 </div>

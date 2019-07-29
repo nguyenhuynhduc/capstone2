@@ -20,15 +20,21 @@ Route::get('danh-sach-bai-do','User\park@getPark')->name('selectPark');
 
 Route::get('dang-nhap','User\login@getLogin')->name('getLogin');
 Route::post('dang-nhap','User\login@postLogin')->name('postLogin');
+Route::get('dang-xuat','User\login@getLogout')->name('getLogout');
 
 
 Route::get('dang-ky','User\register@getRegister')->name('getRegister');
 Route::post('dang-ky','User\register@postRegister')->name('postRegister');
 
 
-Route::get('dang-ky-dai-han','User\bookLong@getBookLong')->name('getBookLong');
 
-Route::get('dang-nhap','User\login@getLogin')->name('getLogin');
+Route::get('dang-ky-dai-han','User\bookLong@getBookLong')->name('getBookLong');
+Route::post('dang-ky-dai-han','User\bookLong@postBookLong')->name('postBookLong');
+
+
+Route::get('dang-ky-ngan-han','User\bookShort@getBookShort')->name('getBookShort');
+Route::post('dang-ky-ngan-han','User\bookShort@postBookShort')->name('postBookShort');
+
 
 
 Route::get('tai-khoan','User\account@getAccount')->name('account');

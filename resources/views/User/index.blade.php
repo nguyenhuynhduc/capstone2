@@ -58,7 +58,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <li><a href="http://localhost/capstone2/resources/views/Users/SelectDaNang.php?id=DN">Các bãi đỗ</a></li>
                     <li><a href="{{route('selectPark')}}?id=all">Danh sách bãi</a></li>
                     <!--<li><a href="#login">Đăng ký bãi  </a></li>-->
-
                     {{--<li>
                         <!-- First Tier Drop Down -->
                         <label for="drop-2" class="toggle">Đăng ký bãi <span class="fa fa-angle-down" aria-hidden="true"></span>
@@ -68,12 +67,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <ul>
                             <li><a href="daiHan.html" class="drop-text">Dài hạn</a></li>
                             <li><a href="nganHan.html" class="drop-text">Ngắn hạn</a></li>
-
-
                         </ul>
                     </li>--}}
-                    <li><a href="{{route('getLogin')}}">Đăng nhập</a></li>
-                    <li><a href="{{route('getRegister')}}">Đăng ký</a></li>
+                    @if(session()->has('user'))
+                        <li><a href="{{route('account')}}">{{session()->get('name')}}</a></li>
+                        <li><a href="{{route('getLogout')}}">Đăng Xuất</a></li>
+                    @else
+                        <li><a href="{{route('getLogin')}}">Đăng nhập</a></li>
+                        <li><a href="{{route('getRegister')}}">Đăng ký</a></li>
+                    @endif
                 </ul>
             </nav>
             <!-- //nav -->
@@ -121,7 +123,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <!-- //banner-bottom -->
 <!--/last-content-->
-<section class="last-content text py-5">
+{{--<section class="last-content text py-5">
     <div class="container py-md-3 text-center">
         <div class="last-w3pvt-inner-content px-lg-5">
             <h3 class="mb-4 tittle-w3layouts" id="login">Đăng Ký <span>Dài Hạn & </span> Ngắn  !</h3>
@@ -132,7 +134,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
     </div>
-</section>
+</section>--}}
 <!--//last-content-->
 <section class="ab-info-main py-5">
     <div class="container py-md-4">
@@ -189,12 +191,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- social icons -->
         <div class="footer-w3pvt-copy-social my-4">
             <ul>
-
                 <a href="#">
                     <span class="fa fa-rss-square"></span>
                 </a>
                 </li>
-
             </ul>
         </div>
         <!-- //social icons -->

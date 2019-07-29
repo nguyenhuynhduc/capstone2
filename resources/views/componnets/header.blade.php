@@ -43,7 +43,7 @@
             <!-- nav -->
             <nav class="py-md-4 py-3 d-lg-flex nav_w3pvt">
                 <div id="logo">
-                    <h1><a href="">Hey Park!</a></h1>
+                    <h1><a href="{{route('home')}}">Hey Park!</a></h1>
                 </div>
                 <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
                 <input type="checkbox" id="drop" />
@@ -66,8 +66,13 @@
 
                         </ul>
                     </li>--}}
-                    <li><a href="{{route('getLogin')}}">Đăng nhập</a></li>
-                    <li><a href="{{route('getRegister')}}">Đăng ký</a></li>
+                    @if(session()->has('user'))
+                    <li><a href="{{route('account')}}">{{session()->get('name')}}</a></li>
+                    <li><a href="{{route('getLogout')}}">Đăng Xuất</a></li>
+                        @else
+                        <li><a href="{{route('getLogin')}}">Đăng nhập</a></li>
+                        <li><a href="{{route('getRegister')}}">Đăng ký</a></li>
+                    @endif
                 </ul>
             </nav>
             <!-- //nav -->

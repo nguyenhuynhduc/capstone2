@@ -130,7 +130,7 @@ else if($city=='DN')
                                     <?php echo $row['address']?></p>
                                 <p class="group inner list-group-item-text">
                                     <?php echo $row['price']?> VND</p>
-                                <a href="daiHan.html" class="btn btn-info" role="button">Dài Hạn</a>
+                                <a href="http://127.0.0.1:8000/dang-ky-dai-han?id=<?php echo $row['idPark']?>" class="btn btn-info" role="button">Dài Hạn</a>
                                 <a href="nganHan.html" class="btn btn-primary" role="button">Ngắn Hạn</a>
 
                             </div>

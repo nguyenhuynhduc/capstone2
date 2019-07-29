@@ -6,6 +6,15 @@
     @if (Session()->has('message'))
         <script type="text/javascript">alert("{{ session()->get('message') }}");</script>
     @endif
+    @if (isset($msg))
+        <script type="text/javascript">alert("{{ $msg }}");</script>
+    @endif
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <script type="text/javascript">alert("{{ $error }}");</script>
+            @break
+        @endforeach
+    @endif
     <section class="banner-bottom py-5">
         <div class="container py-md-4">
             <h3 class="tittle-w3layouts two text-center mb-lg-5">Thông tin & Bãi </h3>
